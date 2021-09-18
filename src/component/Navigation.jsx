@@ -3,15 +3,29 @@ import {Container, Navbar, Nav} from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 function Navigation() {
+
+    const navStyle ={
+        btn: {
+            color: 'white',
+            textDecoration: 'none',
+            margin: '0px 10px',
+            border: '1px solid black',
+            padding: '5px 10px',
+            backgroundColor: 'indigo'
+        }
+    }
+
     return (
         <div>
             <Navbar bg="primary" variant="dark">
                 <Container>
-                    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+                    
+                    <Link to='/'><Navbar.Brand>REACT</Navbar.Brand></Link>
                     <Nav className="me-auto">
-                        <Nav.Link><Link to='/'>Home</Link></Nav.Link>
-                        <Nav.Link href="#features">Features</Nav.Link>
-                        <Nav.Link href="#pricing">Pricing</Nav.Link>
+                        <Link exact to='/'><Nav style={navStyle.btn}>Home</Nav></Link>
+                        <Link exact to='/blog'><Nav style={navStyle.btn}>Blog</Nav></Link>
+                        <Link exact to='/about'><Nav style={navStyle.btn}>About</Nav></Link>
+                        <Link exact to='/contact'><Nav style={navStyle.btn}>Contact</Nav></Link>
                     </Nav>
                 </Container>
             </Navbar>

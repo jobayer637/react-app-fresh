@@ -1,6 +1,8 @@
 import React from 'react'
 import {Container, Navbar, Nav} from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import Logout from './Logout'
+import Login from './Login'
 
 function Navigation() {
 
@@ -26,6 +28,8 @@ function Navigation() {
                         <Link exact to='/blog'><Nav style={navStyle.btn}>Blog</Nav></Link>
                         <Link exact to='/about'><Nav style={navStyle.btn}>About</Nav></Link>
                         <Link exact to='/contact'><Nav style={navStyle.btn}>Contact</Nav></Link>
+                        <Logout />
+                        {/* <Login /> */}
                     </Nav>
                 </Container>
             </Navbar>
